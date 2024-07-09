@@ -4,11 +4,7 @@
 // массиве
 
 
-using System;
-
-class Program
-{
-    static void Main()
+ void Main()
     {
         Console.WriteLine("Введите размер массива");
         int size = Convert.ToInt32(Console.ReadLine());
@@ -49,4 +45,4 @@ class Program
         }
         Console.WriteLine("]");
     }
-}
+Main();
