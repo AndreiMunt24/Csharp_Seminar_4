@@ -4,11 +4,7 @@
 // или при вводе числа, сумма цифр которого чётная.
 
 
-using System;
-
-class Program
-{
-    static void Main()
+void Main()
     {
         while (true)
         {
@@ -39,7 +35,7 @@ class Program
         Console.WriteLine("Объединенный массив: " + joinedArray);
     }
 
-    static void PrintArray(int[] arrayForPrint)
+    void PrintArray(int[] arrayForPrint)
     {
         for(int i = 0; i < arrayForPrint.Length; i++)
             System.Console.Write(arrayForPrint[i] + " ");
@@ -47,7 +43,7 @@ class Program
         System.Console.WriteLine();
     }
 
-    static int[] GenerateArray(int size, int minValue, int maxValue)
+    int[] GenerateArray(int size, int minValue, int maxValue)
     {
         int[] tempArray = new int[size];
         Random rand = new Random();
@@ -58,19 +54,19 @@ class Program
         return tempArray;
     }
 
-    static int ReadInt(string msg)
+    int ReadInt(string msg)
     {
         System.Console.Write(msg);
         return Convert.ToInt32(Console.ReadLine());
     }
 
-    static string ReadString(string msg)
+    string ReadString(string msg)
     {
         System.Console.Write(msg);
         return Console.ReadLine();
     }
 
-    static bool IsSumOfDigitsEven(int number)
+     bool IsSumOfDigitsEven(int number)
     {
         int sum = 0;
         while (number != 0)
@@ -81,8 +77,8 @@ class Program
         return sum % 2 == 0;
     }
 
-    static string Join(int[] array, string separator)
+    string Join(int[] array, string separator)
     {
         return string.Join(separator, array);
     }
-}
+Main();
